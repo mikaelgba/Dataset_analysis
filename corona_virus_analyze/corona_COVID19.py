@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
 import csv
+import method
 
 nome_arquivo = "datasets\corona-virus-brazil/brazil_covid19.csv"
 
@@ -30,20 +30,5 @@ with open(nome_arquivo) as arquivo:
             countCasos = 0
             countMortes = 0
 
-plt.figure(figsize=(8, 6))
-x_data, y_data = (dias,casos)
-plt.bar(x_data, y_data)
-plt.title("Numeros de Casos no Brasil")
-plt.ylabel('Casos')
-plt.xlabel('Dias')
-plt.show()
-plt.close()
-
-plt.figure(figsize=(8, 6))
-x_data, y_data = (dias,mortes)
-plt.bar(x_data, y_data)
-plt.title("Numeros de Mortes no Brasil")
-plt.ylabel('Mortes')
-plt.xlabel('Dias')
-plt.show()
-plt.close()        
+method.gerar_grafico(dias, casos, "Numeros de Casos no Brasil",'Casos', 'Dias')
+method.gerar_grafico(dias, mortes, "Numeros de Mortes no Brasil",'Mortes', 'Dias') 
