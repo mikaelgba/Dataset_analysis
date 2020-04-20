@@ -37,6 +37,3 @@ print(regiao_cinco)
 dias, casos, mortes = method.criar_listas(regiao_cinco)
 method.gerar_grafico(dias, casos,"Casos na região Sul","Casos","Dias")
 method.gerar_grafico(dias, mortes,"Mortes na região Sul","Mortes","Dias")
-
-
-
